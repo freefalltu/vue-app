@@ -1,20 +1,18 @@
 <template>
     <form class="form" @submit.prevent>
         <h4>Создание поста</h4>
-        <input 
+        <MyInput
             v-model="post.title"
-            class="input"
             type="text" 
             placeholder="Название"
         >
-        </input>
-        <input 
+        </MyInput>
+        <MyInput 
             v-model="post.body"
-            class="input" 
             type="text" 
             placeholder="Описание"
         >
-        </input>
+        </MyInput>
         <MyButton 
             class="btn__form"
             @click="createPost"
@@ -25,6 +23,8 @@
 </template>
 
 <script>
+import MyInput from './UI/MyInput.vue';
+
 export default {
     data() {
         return {
@@ -51,13 +51,6 @@ export default {
 
 .btn__form {
     align-self: flex-end;
-    margin-top: 15px;
-}
-
-.input {
-    width: 100%;
-    border: 1px solid teal;
-    padding: 10px 15px;
     margin-top: 15px;
 }
 
