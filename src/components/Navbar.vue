@@ -8,7 +8,13 @@
             >
             Список постов
             </MyButton>
-            <MyButton @click="$router.push('/about')">О сайте</MyButton>
+            <MyButton 
+            class="navbar__btns-left"
+            @click="$router.push('/about')"
+            >
+            О сайте
+        </MyButton>
+            <MyButton @click="$router.push('/composition')">Composition</MyButton>
         </div>
     </div>
 </template>
